@@ -1,3 +1,20 @@
+<?php
+include 'koneksi.php';
+
+if(isset($_POST['proses'])){
+    mysqli_query($koneksi, "insert into informasi set
+    NIM = '$_POST[nim]',
+    Nama = '$_POST[nama]',
+    Kelas = '$_POST[kelas]',
+    Jenis_kelamin = '$_POST[jenis_kelamin]',
+    Email = '$_POST[email]',
+    Saran = '$_POST[saran]'");
+
+    echo "Data sudah tersimpan";
+}
+?>
+    
+
 <!DOCTYPE html>
 <html lang="en">
     
